@@ -3,11 +3,11 @@ fastapi
 black
 isort
 websockets
+libmagic
 pydantic
-langchain
 uvicorn
 jinja2
-faiss-cpu
 bs4
 unstructured
-libmagic
+langchain
+faiss-cpu

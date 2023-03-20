@@ -16,12 +16,11 @@ app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 vectorstore: Optional[VectorStore] = None
 
-
 @app.on_event("startup")
 async def startup_event():
     logging.info("loading vectorstore")
-    if not Path("vectorstore.pkl").exists():
-        raise ValueError("vectorstore.pkl does not exist, please run ingest.py first")
+    if not Path("vectorstore_final.pkl").exists():
+        raise ValueError("vectorstore_final.pkl does not exist, please run ingest.py first")
     with open("vectorstore.pkl", "rb") as f:
         global vectorstore
         vectorstore = pickle.load(f)
