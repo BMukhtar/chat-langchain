@@ -1,6 +1,6 @@
 .PHONY: start
 start:
-	uvicorn main:app --reload --port 9000
+	OPENAI_API_KEY=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 python main.py
 
 .PHONY: format
 format:
